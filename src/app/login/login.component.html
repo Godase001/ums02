@@ -1,0 +1,31 @@
+<div class="container-fluid  ">
+    <div class="row justify-content-center mt-5 ">
+        <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+              <h2 class="text-center text-info">Login</h2>
+            </div>
+            <div class="card-body bg-primary gradiant text-white">
+               
+                    <form action="" [formGroup]="loginForm">
+                  
+                   <div class="form-group">
+                    <label class="form-label">Enter Registered Email</label>
+                    <input type="text" formControlName="email" name="email" class="form-control" placeholder="Email" id="">
+                   </div> <br>
+                   <div class="form-group">
+                    <label class="form-label">Enter Password</label>
+                    <input type="password" formControlName="pwd" name="pwd" class="form-control" placeholder="Password" id="">
+                   </div> <br>
+                   <button type="submit" class="form-control text-center btn btn-danger gradiant" (click)="submitData()">login</button> <br>
+                   <a [routerLink]="['/register']" class="text-info mt-5 text-info">Register</a>
+                   <a [routerLink]="['/logout']" class="text-info m-5">forgot Password</a>
+                </form>
+                </div>
+               
+            </div>
+        </div>
+        
+            </div>
+          </div>
+       

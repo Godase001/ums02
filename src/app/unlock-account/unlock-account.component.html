@@ -1,0 +1,36 @@
+
+        <div class="container-fluid ">
+            <div class="row justify-content-center" >
+                <div class="col-md-4 m-5">
+                <div class="card">
+                    <div class="card-header">
+                      <h2 class="text-center text-info">UnlockAccount</h2>
+                    </div>
+                    <div class="card-body bg-dark gradiant text-white">
+                       
+                        <form [formGroup]="unlockForm">
+                      
+                            <div class="form-group">
+                                <label class="form-label">Email</label>
+                                <input type="email" name="email" formControlName="email" class="form-control" id="">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label">New Password</label>
+                                <input type="password" name="newPwd" formControlName="newPwd" class="form-control" id="">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label">Temporary Password</label>
+                                <input type="text" formControlName="tempPwd" name="tempPwd" class="form-control" id="">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="form-label">Confirm New Password</label>
+                                <input type="password" formControlName="confirmPwd" name="confirmPwd" class="form-control" id="">
+                            </div>
+                       
+                    </form>
+                    </div>
+                    <button type="button" class="btn btn-success m-3  " (click)="unlockEmailData()">Unlock</button>
+                </div>
+                    </div>
+                  </div>
+               

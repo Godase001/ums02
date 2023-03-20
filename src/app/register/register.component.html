@@ -1,0 +1,81 @@
+<div class="container-fluid">
+
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <img src="" alt="">
+            <div class="card">
+                <img src="" alt="">
+                <h2 class="card-header text-center text-info">Register </h2>
+                <div class="card-body bg-success gradiant text-white">
+                   
+                    <form action="" [formGroup]="RegisterForm">
+                      
+                        <div class="form-group">
+                            <label class="form-label">First Name</label>
+                            <input type="text" formControlName="fname" name="fname" class="form-control" placeholder=""
+                                id="">
+
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Last Name</label>
+                            <input type="text" name="lname" formControlName="lname" class="form-control" placeholder=""
+                                id="">
+
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Gender</label>
+                            <select name="" class="form-select" id="">
+                                <option value=""></option>
+                                <option value="">Male</option>
+                                <option value="">Female</option>
+                                <option value="">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">Country</label>
+                            <select formControlName="countryId" name="countryId" class="form-control"
+                                (change)="getStateData($any($event.target).value)" id="">
+                                <option *ngFor="let s of country|keyvalue" [value]="s.key">{{s.value}}</option>
+
+                            </select>
+                        </div>
+
+                        <div class="form-group">State
+                            <select name="stateId" formControlName="stateId" class="form-select"
+                                (change)="getCityData($any($event.target).value)" id="">
+                                <option *ngFor="let a of state|keyvalue" [value]="a.key">{{a.value}}</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="form-label">city</label>
+                            <select name="cityId" formControlName="cityId" class="form-select" id="">
+                                <option *ngFor="let s of city|keyvalue" [value]="s.key">{{s.value}} </option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">Email
+                            <input type="email" (blur)="getEmailData(email.value)" #email formControlName="email"
+                                name="email" class="form-control" id="">
+                        </div>
+
+                        <div class="form-group">Date of Birth
+                            <input type="date" name="dob" formControlName="dob" class="form-control" id="">
+                        </div>
+                        <div class="form-group">Mobile Number
+                            <input type="number" name="phno" formControlName="phno" class="form-control" id="">
+                        </div>
+                        <button type="button" class="btn btn-secondary m-3" (click)="registerData()">Register</button>
+                        <button type="reset" class="btn btn-danger m-3 ">Reset</button>
+                    </form>
+                </div>
+                
+
+
+              
+            </div>
+
+        </div>
+        <
+    </div>
+</div>
